@@ -1,0 +1,78 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Pâtes au citron · Recettes mises de côté</title><style>
+:root{--encre:#14181f;--gris:#5b6470;--filet:#14181f;--fond:#fff;--accent:#9c4a2f;--note:#f3ece2}
+@media (prefers-color-scheme: dark){:root{--encre:#ece7df;--gris:#a7a29a;--filet:#ece7df;--fond:#16181c;--accent:#d98a69;--note:#23262b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--encre);font:400 17px/1.5 "Avenir Next","Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+.condense{font-family:"DIN Condensed","Barlow Condensed","Arial Narrow","Helvetica Neue",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.005em}
+header.site{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1px solid var(--filet)}
+header.site a{text-decoration:none}
+header.site .nom{font-size:26px;line-height:1}
+header.site .retour{font-size:14px;color:var(--gris)}
+.page{max-width:1080px;margin:0 auto;padding:0 24px 56px}
+.rub{display:block;text-align:center;font-size:15px;letter-spacing:.12em;margin:44px 0 18px}
+.titre{font-size:clamp(34px,6.2vw,66px);line-height:.98;text-align:center;margin:0;padding:22px 0;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.cols{display:grid;grid-template-columns:minmax(240px,.8fr) 1.7fr;gap:0;margin-top:30px}
+.gauche{padding-right:28px;border-right:1px solid var(--filet);text-align:center}
+.droite{padding-left:30px}
+.meta,.pers{margin-bottom:22px}
+.meta svg,.pers svg{color:var(--gris);display:block;margin:0 auto 6px}
+.meta p,.pers p{margin:0;font-size:16px}
+.gauche ul{list-style:none;margin:0;padding:0}
+.gauche li{padding:1px 0;font-size:16px}
+.gauche h3{font-size:15px;margin:14px 0 4px;letter-spacing:.06em}
+.etape{margin-bottom:20px}.etape h4{margin:0 0 2px;font-size:17px}
+.etape p{margin:0}
+.note{background:var(--note);border-left:3px solid var(--accent);padding:12px 16px;margin-top:8px;font-size:16px}
+.photo{display:block;width:100%;height:auto;margin-top:34px}
+.photo.large{aspect-ratio:4/3;object-fit:cover;object-position:50% 58%}
+.src{font-size:13px;color:var(--gris);margin-top:30px;text-align:center}
+.nav{display:flex;justify-content:space-between;gap:16px;margin-top:40px;padding-top:18px;border-top:1px solid var(--filet);font-size:15px}
+.nav a{text-decoration:none;max-width:46%}
+.nav .s{color:var(--gris);display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+/* variante B : photo en tête */
+.vB .photo{margin-top:0;aspect-ratio:3/2;object-fit:cover;object-position:50% 55%}
+.vB .rub{margin-top:26px}
+.vB .cols{grid-template-columns:1.7fr minmax(240px,.8fr)}
+.vB .gauche{order:2;padding:0 0 0 28px;border-right:0;border-left:1px solid var(--filet)}
+.vB .droite{order:1;padding:0 30px 0 0}
+/* variante C : photo à côté */
+.vC .split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;margin-top:34px;align-items:start}
+.vC .split .photo{margin:0;position:sticky;top:20px}
+.vC .cols{grid-template-columns:1fr;margin-top:0}
+.vC .gauche{border:0;padding:0 0 18px;text-align:left;display:grid;grid-template-columns:auto 1fr;gap:6px 28px;border-bottom:1px solid var(--filet);margin-bottom:22px}
+.vC .gauche .meta,.vC .gauche .pers{margin:0}
+.vC .gauche .ing{grid-column:1/-1;text-align:left}
+.vC .meta svg,.vC .pers svg{margin:0 0 6px}
+.vC .droite{padding:0}
+/* accueil */
+.intro{max-width:1080px;margin:0 auto;padding:44px 24px 10px}
+.intro h1{font-size:clamp(44px,9vw,104px);line-height:.92;margin:0}
+.intro p{color:var(--gris);max-width:620px;margin:16px 0 0}
+.outils{max-width:1080px;margin:0 auto;padding:18px 24px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.outils input{flex:1 1 220px;font:inherit;padding:10px 14px;border:1px solid var(--filet);background:transparent;color:inherit;border-radius:0}
+.puce{font:inherit;font-size:14px;padding:8px 13px;border:1px solid var(--filet);background:transparent;color:inherit;cursor:pointer;border-radius:0}
+.puce[aria-pressed=true]{background:var(--encre);color:var(--fond)}
+.groupe{max-width:1080px;margin:0 auto;padding:0 24px}
+.groupe h2{font-size:30px;margin:42px 0 14px;padding-top:14px;border-top:1px solid var(--filet);display:flex;justify-content:space-between}
+.groupe h2 span{color:var(--gris);font-size:18px}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px 18px}
+.carte{text-decoration:none;display:block}
+.carte img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--note)}
+.carte:nth-child(3n+2) img{aspect-ratio:1/1}
+.carte:nth-child(5n+4) img{aspect-ratio:4/5.6}
+.carte b{display:block;font-size:22px;line-height:1.02;margin-top:8px}
+.carte i{font-style:normal;font-size:13px;color:var(--gris)}
+.vide{padding:40px 24px;text-align:center;color:var(--gris)}
+footer{max-width:1080px;margin:56px auto 0;padding:18px 24px 40px;border-top:1px solid var(--filet);color:var(--gris);font-size:13px}
+@media(max-width:760px){
+ .cols,.vB .cols,.vC .split{grid-template-columns:1fr}
+ .gauche,.vB .gauche{border:0;padding:0 0 18px;border-bottom:1px solid var(--filet)}
+ .droite,.vB .droite{padding:20px 0 0}
+ .vB .gauche{order:1}.vB .droite{order:2}
+ .vC .split .photo{position:static}
+ .vC .gauche{display:block;text-align:center}
+ .page{padding:0 16px 40px}
+ header.site{padding:14px 16px}
+}
+</style></head><body><header class="site"><a class="nom condense" href="../index.html">Recettes mises de côté</a><a class="retour" href="../index.html">← Toutes les recettes</a></header><main class="page vA"><span class="rub condense">Pâtes</span><h1 class="titre condense">Pâtes au citron</h1><div class="cols"><div class="gauche"><div class="meta"><svg viewBox="0 0 48 40" width="30" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h36c0 9-7 15-18 15S6 29 6 20z"/><path d="M26 18l9-12M30 20l7-9"/></svg><p>400 g de pâtes</p></div><div class="ing"><ul><li>400 g de pâtes courtes</li><li>1 citron</li><li>50 g de beurre salé</li><li>200 ml de crème liquide</li><li>60 g de parmesan</li><li>Sel, poivre</li></ul></div></div><div class="droite"><div class="etape"><h4>Étape 1</h4><p>Râper le zeste du citron, presser le jus (2 c. à soupe).</p></div><div class="etape"><h4>Étape 2</h4><p>Cuire les pâtes.</p></div><div class="etape"><h4>Étape 3</h4><p>Faire fondre le beurre à feu doux, ajouter la crème, assaisonner, puis zeste et jus de citron.</p></div><div class="etape"><h4>Étape 4</h4><p>Porter doucement à ébullition, cuire 2 min.</p></div><div class="etape"><h4>Étape 5</h4><p>Mélanger aux pâtes, servir avec le parmesan râpé ou en copeaux.</p></div></div></div><img class="photo large" src="../img/pates-au-citron.jpg" alt="Pâtes au citron"><p class="src">Recette d'après : Origine non identifiée</p><div class="nav"><a href="gravlax-de-saumon-et-sauce-a-l-aneth.html"><span class="s">Précédente</span>Gravlax de saumon et sauce à l'aneth</a><a href="pates-au-persil.html" style="text-align:right"><span class="s">Suivante</span>Pâtes au persil</a></div></main></body></html>
